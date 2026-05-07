@@ -185,7 +185,7 @@ except ValueError:
 
 Instituição / Institution: UNINTER (Recife, PE)
 <br>
-Curso / Course: Engenharia de Software
+Curso / Course: Análise e Desenvolvimento de Sistemas
 <br>
 Data / Date: Maio de 2026 (May 2026)
 <br>
