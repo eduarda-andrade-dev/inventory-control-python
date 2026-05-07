@@ -93,16 +93,25 @@ Desenvolvimento de uma aplicação para gestão de almoxarifado focada em integr
 **EN:** The code was developed in Python, using data structures for inventory control and decision blocks to ensure operation integrity. Below is an example of the stock validation and exception handling logic used:
 
 ```python
-# Exemplo de tratamento de entrada e validação de estoque
+# Exemplo de tratamento de entrada e validação de estoque (Saída)
 try:
-    quantidade_saida = int(input("Informe a quantidade a ser retirada: "))
-    if quantidade_saida > estoque[produto]['saldo']:
-        print(f"Erro! Saldo insuficiente! O estoque de '{produto}' é {estoque[produto]['saldo']}.")
+    quantidade = int(input("Informe a quantidade a ser retirada: "))
+
+    # Só permite a movimentação se houver saldo suficiente
+    if quantidade <= estoque[produto]:
+        responsavel = input("Informe o nome do responsável: ")
+        data_saida = datetime.now().strftime("%d/%m/%Y %H:%M")
+        
+        # Subtrai a quantidade do estoque
+        estoque[produto] = estoque[produto] - quantidade
+        
+        print(f"\nSucesso! Saída registrada para {responsavel} em {data_saida}.")
+        print(f"Novo saldo: {estoque[produto]}")
     else:
-        estoque[produto]['saldo'] -= quantidade_saida
-        print("Sucesso! Saída registrada.")
+      print(f"\nErro! Saldo insuficiente! O estoque de '{produto}' é {estoque[produto]}. Tente uma quantidade menor.\n")
+      # Aqui ele voltará para o início do laço para pedir a quantidade novamente
 except ValueError:
-    print("Erro! Por favor, insira um valor numérico válido.")
+      print("Erro! A quantidade informada deve ser um número inteiro. Tente novamente.\n")
 ```
 **PT:** [Clique aqui para acessar o código-fonte completo (main.py)](./main.py)
 
