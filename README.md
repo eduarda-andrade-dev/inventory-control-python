@@ -113,9 +113,9 @@ try:
 except ValueError:
       print("Erro! A quantidade informada deve ser um número inteiro. Tente novamente.\n")
 ```
-**PT:** [Clique aqui para acessar o código-fonte completo (main.py)](.inventory_management.py)
+**PT:** [Clique aqui para acessar o código-fonte completo (main.py)](./inventory_management.py)
 
-**EN:** [Click here to access the full source code (main.py)](.inventory_management.py)
+**EN:** [Click here to access the full source code (main.py)](./inventory_management.py)
 
 ---
 
