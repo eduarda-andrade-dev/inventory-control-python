@@ -1,4 +1,4 @@
-# 📦 Sistema de Controle de Estoque
+# Sistema de Controle de Estoque
 
 Aplicação via terminal (CLI) desenvolvida em Python para gestão de almoxarifado, focada na rastreabilidade de produtos e prevenção de falhas operacionais através de validação rigorosa de dados.
 
